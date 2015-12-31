@@ -24,6 +24,24 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+init.environ.rc	\
+init.rilcommon.rc \
+init.carrier.rc \
+init.rilchip.rc \
+init.qcom.rc \
+init.zygote32.rc \
+init.qcom.usb.rc \
+fstab.qcom \
+init.trace.rc \
+ueventd.rc \
+ueventd.qcom.rc \
+init.rc \
+init.target.rc \
+init.usb.rc \
+init.container.rc
+
 # Dalvik VM config for 1536MB (1.5GB) RAM devices
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
