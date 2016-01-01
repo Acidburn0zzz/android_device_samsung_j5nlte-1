@@ -50,7 +50,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-init.environ.rc	\
 init.rilcommon.rc \
 init.carrier.rc \
 init.rilchip.rc \
@@ -61,7 +60,6 @@ fstab.qcom \
 init.trace.rc \
 ueventd.rc \
 ueventd.qcom.rc \
-init.rc \
 init.target.rc \
 init.usb.rc \
 init.container.rc
