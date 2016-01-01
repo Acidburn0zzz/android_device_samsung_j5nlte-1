@@ -32,7 +32,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm8916
-TARGET_BOOTLOADER_BOARD_NAME := msm8916
+TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
@@ -41,7 +41,8 @@ BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_OFFSET :=0x00008000
 TARGET_KERNEL_SOURCE := kernel/samsung/j5nlte
-TARGET_KERNEL_CONFIG := cm_msm8916_sec_j5nlte_eur_defconfig
+TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
+TARGET_KERNEL_VARIANT_CONFIG :=  msm8916_sec_j5nlte_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
