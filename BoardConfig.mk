@@ -43,6 +43,9 @@ TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
 TARGET_BOOTLOADER_BOARD_NAME := msm8916
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := j5lte,j5ltexx,j5nlte,j5nltexx,j500f,J500F,j500fn,J500FN
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT := true
