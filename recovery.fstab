@@ -26,13 +26,13 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # <src>                                 <mnt_point>       <type>   <mnt_flags and options>			<fs_mgr_flags>
-/dev/block/bootdevice/by-name/efs          /efs            ext4           default				wait,check
-/dev/block/bootdevice/by-name/boot         /boot           emmc           default               		recoveryonly
-/dev/block/bootdevice/by-name/recovery     /recovery       emmc           default               		recoveryonly
-/dev/block/bootdevice/by-name/cache        /cache          ext4           default               		wait
-/dev/block/bootdevice/by-name/system       /system         ext4           ro,errors=panic	                wait,verify
-/dev/block/bootdevice/by-name/userdata     /data           ext4           default               		wait,length=-16384
-/dev/block/bootdevice/by-name/hidden       /preload        ext4           default               		recoveryonly
+/dev/block/platform/7824900.sdhci/by-name/efs          /efs            ext4           default				wait,check
+/dev/block/platform/7824900.sdhci/by-name/boot         /boot           emmc           default               		recoveryonly
+/dev/block/platform/7824900.sdhci/by-name/recovery     /recovery       emmc           default               		recoveryonly
+/dev/block/platform/7824900.sdhci/by-name/cache        /cache          ext4           default               		wait
+/dev/block/platform/7824900.sdhci/by-name/system       /system         ext4           ro,errors=panic	                wait,verify
+/dev/block/platform/7824900.sdhci/by-name/userdata     /data           ext4           default               		wait,length=-16384
+/dev/block/platform/7824900.sdhci/by-name/hidden       /preload        ext4           default               		recoveryonly
 
 # Vold managed volumes
 /dev/block/mmcblk1p1                       /sdcard         vfat           default
