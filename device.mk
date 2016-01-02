@@ -86,5 +86,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
 
+# call the proprietary setup
+$(call inherit-product, vendor/samsung/j5nlte/j5nlte-vendor.mk)
+
 # Inherit from qcom-common
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
