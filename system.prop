@@ -5,7 +5,11 @@
 # system.prop for msm8916
 #
 
+# Display
 ro.sf.lcd_density=320
+debug.composition.type=c2d
+persist.hwc.mdpcomp.enable=true
+ro.opengles.version=196608
 
 # Audio
 tunnel.audio.encode = false
