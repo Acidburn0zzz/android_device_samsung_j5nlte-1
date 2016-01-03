@@ -70,19 +70,17 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-init.rilcommon.rc \
-init.carrier.rc \
-init.rilchip.rc \
-init.qcom.rc \
-init.zygote32.rc \
-init.qcom.usb.rc \
-fstab.qcom \
-init.trace.rc \
-ueventd.rc \
-ueventd.qcom.rc \
-init.target.rc \
-init.usb.rc \
-init.container.rc
+    init.rilcommon.rc \
+    init.carrier.rc \
+    init.rilchip.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    fstab.qcom \
+    init.trace.rc \
+    ueventd.rc \
+    ueventd.qcom.rc \
+    init.target.rc \
+    init.usb.rc
 
 # Display
 PRODUCT_PACKAGES += \
