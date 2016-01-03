@@ -131,6 +131,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8916
+
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/j5nlte/j5nlte-vendor.mk)
 
