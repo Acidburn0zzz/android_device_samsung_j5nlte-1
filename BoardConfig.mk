@@ -84,3 +84,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 # QCOM
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+
+
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/j5nlte/ril/
