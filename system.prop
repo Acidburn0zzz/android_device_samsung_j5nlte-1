@@ -7,6 +7,23 @@
 
 ro.sf.lcd_density=320
 
+# Audio
+tunnel.audio.encode = false
+audio.offload.buffer.size.kb=32
+audio.offload.gapless.enabled=true
+av.offload.enable=false
+use.voice.path.for.pcm.voip=true
+
+# Fluence
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
+# Media
+mm.enable.qcom_parser=3183219
+media.aac_51_output_enabled=true
+
 # RILD
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/smd0
