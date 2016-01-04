@@ -77,10 +77,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     fstab.qcom \
     init.trace.rc \
-    ueventd.rc \
     ueventd.qcom.rc \
-    init.target.rc \
-    init.usb.rc
+    init.target.rc
 
 # Media
 PRODUCT_COPY_FILES += \
