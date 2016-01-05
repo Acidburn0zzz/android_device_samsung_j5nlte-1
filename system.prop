@@ -1,43 +1,103 @@
 #
-# from device/samsung/j5nlte/system.prop
-#
-#
 # system.prop for msm8916
 #
 
-# Display
-ro.sf.lcd_density=320
+#rild.libpath=/system/lib/libreference-ril.so
+rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+# Start in cdma mode
+ro.telephony.default_network=9
+
+debug.sf.hw=1
+debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
-ro.opengles.version=196608
+debug.mdpcomp.logs=0
+dalvik.vm.heapsize=36m
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
 
-# Audio
-tunnel.audio.encode = false
-audio.offload.buffer.size.kb=32
-audio.offload.gapless.enabled=true
-av.offload.enable=false
-use.voice.path.for.pcm.voip=true
+#ro.hdmi.enable=true
+#tunnel.decode=true
+#tunnel.audiovideo.decode=true
+#lpa.decode=false
+#lpa.use-stagefright=true
+#persist.speaker.prot.enable=false
 
-# Fluence
+#
+# system props for the cne module
+#
+persist.cne.feature=1
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+#codecs:(PARSER_)AAC AC3 ASF AVI DTS 3G2 MP2TS QCP FLAC
+mm.enable.qcom_parser=168563
+
+#
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+
+#system props for time-services
+persist.timed.enable=true
+
+#
+# system prop for opengles version
+#
+# 131072 is decimal for 0x20000 to report version 2
+ro.opengles.version=131072
+
+# System property for cabl
+ro.qualcomm.cabl=0
+
+#
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
+#Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=true
+
+#
+#snapdragon value add features
+#
+ro.qc.sdk.audio.ssr=false
+##fluencetype can be "fluence" or "fluencepro" or "none"
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
+#Set for msm8916
+tunnel.audio.encode = false
+ro.config.low_ram=true
+#Buffer size in kbytes for compress offload playback
+audio.offload.buffer.size.kb=32
+#Enable offload audio video playback by default
+av.offload.enable=true
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+#
+#System property for FM transmitter
+#
+ro.fm.transmitter=false
+#enable dsp gapless mode by default
+audio.offload.gapless.enabled=true
 
-# Media
-mm.enable.qcom_parser=3183219
-media.aac_51_output_enabled=true
+#Set composition for USB
+persist.sys.usb.config=diag,serial_smd,rmnet_bam,adb
 
-# RILD
-rild.libpath=/system/lib/libsec-ril.so
-rild.libargs=-d /dev/smd0
+# set lcd density
+ro.sf.lcd_density=320
 
-# RIL
-DEVICE_PROVISIONED=1
-ro.ril.telephony.mqanelements=6
-persist.radio.use_se_table_only=1
-persist.radio.sib16_support=1
-ro.telephony.ril_class=J5DSRIL
-
-# Perfd
-ro.vendor.extension_library=libqti-perfd-client.so
