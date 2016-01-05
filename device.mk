@@ -72,11 +72,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.rilcommon.rc \
     init.carrier.rc \
-    init.rilchip.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     fstab.qcom \
-    init.trace.rc \
     ueventd.qcom.rc \
     init.target.rc
 
