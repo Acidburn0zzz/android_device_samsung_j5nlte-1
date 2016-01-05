@@ -36,8 +36,104 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    tinymix
+    libqcomvoiceprocessing
+
+# TinyAlsa utils
+PRODUCT_PACKAGES += \
+    tinyplay \
+    tinycap \
+    tinymix \
+    tinypcminfo
+
+# Display
+PRODUCT_PACKAGES += \
+    copybit.msm8916 \
+    gralloc.msm8916 \
+    hwcomposer.msm8916 \
+    memtrack.msm8916 \
+    libtinyxml
+
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8916
+
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8916
+
+# OMX
+PRODUCT_PACKAGES += \
+    libdashplayer \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw \
+    qcmediaplayer \
+    libOmxVdecHevc
+
+PRODUCT_BOOT_JARS += \
+    qcmediaplayer
+
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
+
+# Filesystem
+PRODUCT_PACKAGES += \
+    e2fsck
+
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp \
+    ro.sys.usb.default.config=mtp \
+    persist.sys.isUsbOtgEnabled=true
+
+# Wifi
+PRODUCT_PACKAGES += \
+    p2p_supplicant_overlay.conf \
+    wpa_supplicant_overlay.conf
+
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+# WCNSS
+PRODUCT_PACKAGES += \
+    libcurl \
+    libqsap_sdk \
+    libQWiFiSoftApCfg \
+    libwcnss_qmi \
+    wcnss_service
+
+# Misc
+PRODUCT_PACKAGES += \
+    libxml2
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.rilcommon.rc \
+    init.carrier.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    fstab.qcom \
+    ueventd.qcom.rc \
+    init.target.rc
+
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=J5DSRIL
 
 # Audio Caliberation
 PRODUCT_COPY_FILES += \
@@ -79,17 +175,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.rilcommon.rc \
-    init.carrier.rc \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    fstab.qcom \
-    ueventd.qcom.rc \
-    init.target.rc
-
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -97,29 +182,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-PRODUCT_PACKAGES += \
-    libdashplayer \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw \
-    qcmediaplayer \
-    libOmxVdecHevc
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
-
-# Display
-PRODUCT_PACKAGES += \
-    copybit.msm8916 \
-    gralloc.msm8916 \
-    hwcomposer.msm8916 \
-    memtrack.msm8916 \
-    libtinyxml
 
 # Dalvik VM config for 1536MB (1.5GB) RAM devices
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -134,34 +196,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
-
-# Filesystem
-PRODUCT_PACKAGES += \
-    e2fsck
-
-# Power
-PRODUCT_PACKAGES += \
-    power.msm8916
-
-# Wifi
-PRODUCT_PACKAGES += \
-    p2p_supplicant_overlay.conf \
-    wpa_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
-    dhcpcd.conf \
-    hostapd \
-    libwpa_client \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-# WCNSS
-PRODUCT_PACKAGES += \
-    libcurl \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    libwcnss_qmi \
-    wcnss_service
 
 # Prima
 PRODUCT_COPY_FILES += \
